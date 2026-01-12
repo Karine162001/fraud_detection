@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Օրենք</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleorenq.css') }}">
+</head>
+
+<body>
+  <header>
+    <div class="header_1">
+      <a href="{{ url_for('index') }}" class="logo_a">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+      </a>
+      <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 044 00 00 00 </p>
+      <p class="l_location"><i class="fa-solid fa-location-dot"></i> ք․ Երևան Բաբաջանյան փ․</p>
+      <label>
+        <input type="text" placeholder="Search">
+        <button class="but_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </label>
+    </div>
+
+    <div class="header_2">
+      <ul class="ul_menu">
+        <li><a href="{{ url_for('about') }}" class="a_menu">Մեր մասին</a></li>
+        <li><a href="{{ url_for('indexorenq') }}" class="a_menu">Օրենսդրական ուղեցույց</a></li>
+        <li><a href="{{ url_for('indexfraud') }}" class="a_menu">Խարդախությունների հայտնաբերում</a></li>
+        <li><a href="{{ url_for('kap_mez_het') }}" class="a_menu">Խորհրդատվություն</a></li>
+      </ul>
+      <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="all">
+       <h1>Օրենսդրական ուղեցույց</h1>
+
+      <div class="all1">
+        <div class="intro-image">
+          <img src="{{ url_for('static', filename='images/law_banner.png') }}" alt="Օրենսդրական ուղեցույց" >
+        </div>
+      <p class="p_compas">
+         Այս ուղեցույցը ստեղծվել է մեր կայքում օգտագործվող անձնական տվյալների պաշտպանության և գաղտնիության կանոնների
+        վերաբերյալ օգտվողներին տեղեկացնելու համար։ Այստեղ ներկայացված են միջազգային և տեղական կարևորագույն օրենսդրական
+        ակտեր, որոնք պաշտպանում են օգտվողների իրավունքներն ու սահմանում անվտանգության չափորոշիչներ:
+      </p>
+      </div>
+
+        <main class="laws-container">
+      <section class="law-item">
+        <a href="https://gdpr-info.eu/" target="_blank" class="law-link">GDPR</a>
+        <p>GDPR (General Data Protection Regulation)՝ Ընդհանուր տվյալների պաշտպանության կանոնակարգը ուժի մեջ մտել է 2018
+          թվականի մայիսի 25-ին, ԵՄ և ԵՏՏ տարածքում։</p>
+      </section>
+
+      <section class="law-item">
+        <a href="https://www.consumerprivacyact.com/california/" target="_blank" class="law-link">CCPA</a>
+        <p>CCPA (California Consumer Privacy Act)՝ Կալիֆորնիայի Սպառողների Գաղտնիության Օրենքը ուժի մեջ է մտել 2020-ին։
+          Այն նման է GDPR-ին, բայց մշակվել է Կալիֆորնիայի բնակիչների համար։</p>
+      </section>
+
+      <section class="law-item">
+        <a href="https://www.arlis.am/hy/acts/1372" target="_blank" class="law-link">«Տեղեկատվության ազատության մասին»
+          ՀՀ օրենք</a>
+        <p>ՀՀ օրենքը՝ ընդունված 2003-ի սեպտեմբերի 23-ին, ամրապնդում է ՀՀ քաղաքացիների՝ հասարակական տեղեկատվություն
+          ստանալու իրավունքը։</p>
+      </section>
+
+      <section class="law-item">
+        <a href="https://www.arlis.am/hy/acts/98338" target="_blank" class="law-link">«Անձնական տվյալների պաշտպանության
+          մասին» ՀՀ օրենք</a>
+        <p>Օրենքը՝ ընդունված 2015-ի մայիսի 18-ին, կարգավորում է անձնական տվյալների մշակման և դրանց նկատմամբ պետական
+          հսկողության կարգն ու պայմանները։</p>
+      </section>
+    </main>
+  </div>
+
+
+
+  <footer>
+    <a href="{{ url_for('index') }}" class="logo_a">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+    </a>
+    <ul class="ul_foot">
+      <li class="li_foot"><a href="{{ url_for('about') }}" class="a_foot">Մեր մասին</a></li>
+      <li class="li_foot"><a href="{{ url_for('indexorenq') }}" class="a_foot">Օրենսդրական ուղեցույց</a></li>
+      <li class="li_foot"><a href="{{ url_for('indexfraud') }}" class="a_foot">Խարդախությունների հայտնաբերում</a></li>
+      <li class="li_foot"><a href="{{ url_for('kap_mez_het') }}" class="a_foot">Խորհրդատվություն</a></li>
+    </ul>
+
+    <div class="contact1">
+      <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 044 00 00 00 </p>
+      <p class="l_location"><i class="fa-solid fa-location-dot"></i> ք․ Երևան Բաբաջանյան փ․</p>
+      <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

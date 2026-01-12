@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Մեր մասին</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <!-- CSS from static/css -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/styleabout.css') }}">
+</head>
+
+<body>
+  <header>
+    <div class="header_1">
+      <a href="{{ url_for('index') }}" class="logo_a">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+      </a>
+      <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 044 00 00 00 </p>
+      <p class="l_location"><i class="fa-solid fa-location-dot"></i> ք․ Երևան Բաբաջանյան փ․</p>
+      <label>
+        <input type="text" placeholder="Search">
+        <button class="but_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </label>
+    </div>
+
+    <div class="header_2">
+      <ul class="ul_menu">
+        <li><a href="{{ url_for('about') }}" class="a_menu">Մեր մասին</a></li>
+        <li><a href="{{ url_for('indexorenq') }}" class="a_menu">Օրենսդրական ուղեցույց</a></li>
+        <li><a href="{{ url_for('indexfraud') }}" class="a_menu">Խարդախությունների հայտնաբերում</a></li>
+        <li><a href="{{ url_for('kap_mez_het') }}" class="a_menu">Խորհրդատվություն</a></li>
+      </ul>
+      <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+  </header>
+
+  <div class="hole">
+    <h1>Մեր մասին</h1>
+    <div class="hole_1">
+     <div class="hole2">
+       <main class="about-container">
+        <section class="about-section">
+          <p>
+            Մենք ստեղծել ենք այս կայքը՝ նպատակ ունենալով օգնել անհատներին և կազմակերպություններին կանխարգելել
+            և հայտնաբերել ֆինանսական խարդախությունները։ Մեր լուծումները հիմնված են նորարարական տեխնոլոգիաների՝
+            մեքենայական ուսուցման և տվյալների վերլուծության վրա, ինչը թույլ է տալիս արագ և ճշգրիտ հայտնաբերել
+            սխեմաները, որոնք կարող են հանգեցնել վնասների։
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h2>Տեսլական</h2>
+          <p>
+            Մենք ձգտում ենք ստեղծել ավելի անվտանգ և թափանցիկ ֆինանսական միջավայր, որտեղ ցանկացած օգտատեր
+            կարող է վստահ լինել, որ իր տվյալներն ու ֆինանսական գործունեությունը պաշտպանված են խարդախություններից։
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h2>Առաքելություն</h2>
+          <p>
+            Մեր առաքելությունն է՝ տրամադրել հասանելի և արդյունավետ գործիքներ՝ ֆինանսական ռիսկերը նվազեցնելու
+            և խարդախությունները կանխելու համար։ Մենք նպատակ ունենք կրթել օգտատերերին, առաջարկել հեշտ օգտագործելի
+            լուծումներ և աջակցել կազմակերպություններին իրական ժամանակում որոշումներ ընդունելիս։
+          </p>
+        </section>
+
+        <section class="about-section">
+          <h2>Ինչով ենք առանձնանում</h2>
+          <ul class="about-list">
+            <li>Նախագծված պրոֆեսիոնալ ալգորիթմներով՝ ճշգրիտ կանխատեսումներ։</li>
+            <li>Ինտուիտիվ ու պարզ ինտերֆեյս՝ յուրաքանչյուր օգտատիրոջ համար։</li>
+            <li>Անվտանգություն և տվյալների գաղտնիության բարձրագույն մակարդակ։</li>
+          </ul>
+        </section>
+      </main>
+     </div>
+     <img src="static/images/staff.jpg" alt="" class="staffImage">
+    </div>
+
+   
+  </div>
+
+  <footer>
+    <a href="{{ url_for('index') }}" class="logo_a">
+      <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+    </a>
+    <ul class="ul_foot">
+      <li class="li_foot"><a href="{{ url_for('about') }}" class="a_foot">Մեր մասին</a></li>
+      <li class="li_foot"><a href="{{ url_for('indexorenq') }}" class="a_foot">Օրենսդրական ուղեցույց</a></li>
+      <li class="li_foot"><a href="{{ url_for('indexfraud') }}" class="a_foot">Խարդախությունների հայտնաբերում</a></li>
+      <li class="li_foot"><a href="{{ url_for('kap_mez_het') }}" class="a_foot">Խորհրդատվություն</a></li>
+    </ul>
+
+    <div class="contact1">
+      <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 044 00 00 00 </p>
+      <p class="l_location"><i class="fa-solid fa-location-dot"></i> ք․ Երևան Բաբաջանյան փ․</p>
+      <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="hy">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/stylekap_mez_het.css') }}">
+  <title>Խորհրդատվություն</title>
+</head>
+
+<body>
+
+  <header>
+    <div class="header_1">
+      <a href="{{ url_for('index') }}" class="logo_a">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+      </a>
+      <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 044 00 00 00 </p>
+      <p class="l_location"><i class="fa-solid fa-location-dot"></i> ք․ Երևան Բաբաջանյան փ․</p>
+      <label>
+        <input type="text" placeholder="Search" class="inpSearch">
+        <button id="but_search"><i class="fa-solid fa-magnifying-glass"></i></button>
+      </label>
+    </div>
+
+    <div class="header_2">
+      <ul class="ul_menu">
+        <li><a href="{{ url_for('about') }}" class="a_menu">Մեր մասին</a></li>
+        <li><a href="{{ url_for('indexorenq') }}" class="a_menu">Օրենսդրական ուղեցույց</a></li>
+        <li><a href="{{ url_for('indexfraud') }}" class="a_menu">Խարդախությունների հայտնաբերում</a></li>
+        <li><a href="{{ url_for('kap_mez_het') }}" class="a_menu">Խորհրդատվություն</a></li>
+      </ul>
+      <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+    </div>
+  </header>
+<div class="main">
+  <h1>Խորհրդատվություն</h1>
+  <form id="contactForm" method="POST" action="{{ url_for('send_email') }}">
+    <input type="text" name="name" required placeholder="Անուն / Կազմակերպության անուն">
+    <input type="email" name="email" required placeholder="Էլ․ հասցե">
+    <input type="tel" name="phone" required placeholder="+374 00 00 00 00">
+    <textarea name="message" required placeholder="Հաղորդագրություն"></textarea>
+
+    <button type="submit" >Ուղարկել</button>
+  </form> 
+</div>
+
+ 
+<section class="map-section">
+  <h2 class="h2_news">Մեր հասցեն</h2>
+  <div class="map-wrap">
+    <iframe title="Yerevan Arno Babajanyan St"
+      src="https://www.google.com/maps?q=Arno%20Babajanyan%20St%20Yerevan&output=embed"
+      loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen>
+    </iframe>
+  </div>
+  <a class="map-btn" href="https://www.google.com/maps?q=Arno+Babajanyan+St+Yerevan" target="_blank" rel="noopener">
+    Բացել քարտեզը Google Maps-ում
+  </a>
+</section>
+
+  
+
+<footer>
+      <a href="{{ url_for('index') }}" class="logo_a">
+        <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Logo" class="logo">
+      </a>
+      <ul class="ul_foot">
+        <li class="li_foot"><a href="{{ url_for('about') }}" class="a_foot">Մեր մասին</a></li>
+        <li class="li_foot"><a href="{{ url_for('indexorenq') }}" class="a_foot">Օրենսդրական ուղեցույց</a></li>
+        <li class="li_foot"><a href="{{ url_for('indexfraud') }}" class="a_foot">Խարդախությունների հայտնաբերում</a></li>
+        <li class="li_foot"><a href="{{ url_for('kap_mez_het') }}" class="a_foot">Խորհրդատվություն</a></li>
+      </ul>
+
+      <div class="contact1">
+        <p class="p_phone"><i class="fa-solid fa-phone-volume"></i> 044 00 00 00 </p>
+        <p class="l_location"><i class="fa-solid fa-location-dot"></i> ք․ Երևան Բաբաջանյան փ․</p>
+        <div class="contact">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-telegram"></i>
+        <i class="fa-brands fa-whatsapp"></i>
+      </div>
+      </div>
+  </footer>
+</body>
+
+</html>
